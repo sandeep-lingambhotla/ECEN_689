@@ -1,0 +1,27 @@
+git add .
+git status
+git commit -m "added this change"
+git push
+
+git pull
+
+git diff <file_name>
+
+//merge with local changes
+git stash
+git pull
+git stash pop // then resolve
+
+// link: https://nakkaya.com/2009/09/24/git-delete-last-commit/
+
+// committed junk but not pushed yet
+// HEAD~1 -> shorthand for commit before head
+git reset --soft HEAD~1
+
+// pushed junk: creates a new commit that reverses everything introduced by the accidental commit.
+git revert HEAD
+
+// link: http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
+
+// delete a commit on the remote repository:ignore <>, type commit
+git push https://github.tamu.edu/venkateshwar-k/uvm_p2.git +<currentMasterNum>^:master
